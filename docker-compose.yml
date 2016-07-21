@@ -4,7 +4,7 @@ app_memcached:
     hostname: memcached
 app_web:
     container_name: app_web
-    build: .
+    build: ./docker
     ports:
         - "8880:80"
     volumes:

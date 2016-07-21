@@ -4,10 +4,7 @@
 
 # include config
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-source $DIR/config/docker-config.sh
-
-BIN_DIR=`dirname $(readlink -f $0)`
-ROOT_DIR=`dirname $BIN_DIR`
+source $DIR/../config/docker-config.sh
 
 USER_ID=$(id -u)
 GROUP_ID=$(id -g)

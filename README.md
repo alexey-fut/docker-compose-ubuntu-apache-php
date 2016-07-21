@@ -1,19 +1,19 @@
 # docker-compose-ubuntu-apache-php
 
-Run docker container with: 
+Run docker 2 container with: 
 * ubuntu 14.04
 * apache2
-* php 5.5
+* php 5.5.9
 * xdebug
-* memcache (hostname: memcached)
+* memcache (hostname: memcached, port: 11211)
 
-Start container:
+Start container (without modification):
 
     sudo docker-compose up -d
     
-Set user rights:
+Start container with user rights and co (only working on linux systems):
 
-    ./script/docker/docker-setup.sh
+    ./docker/setup/docker-setup.sh
     
 Open in browser:
 

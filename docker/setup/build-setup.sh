@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# define build bin dir "./bin/"
-BUILD_BIN_DIR=`dirname $(readlink -f $0)`
-# define build dir "./"
-BUILD_DIR=`dirname $BUILD_BIN_DIR`
+#install folder
+DIR_INSTALL="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+BUILD_BIN_DIR=$DIR_INSTALL/../../build/bin
+BUILD_DIR=$DIR_INSTALL/../../build
+
 # Phing Target : install, deploy, update
 PHING_TARGET=install
 PHING_TARGET_ENV=docker
